@@ -6,12 +6,26 @@
 	<title>sample</title>
 </head>
 
-<body>
+<body onload="on_load()">
+
+<script type="text/javascript">
+function on_load()
+{
+	var d3 = document.getElementById("d3");
+	var m3 = document.getElementById("m3");
+
+	d3.value = d3.getAttribute("data-value");
+	m3.value = m3.getAttribute("data-value");
+}
+</script>
+	
 <form action="" method="post">
 	日付:<input type="date" id="d1" value=""><br />
 	日付:<input type="date" id="d2" value="2017-01-01"><br />
-	年月:<input type="date" id="m1" value=""><br />
-	年月:<input type="date" id="m2" value="2017-01"><br />
+	日付:<input type="date" id="d3" value="" data-value="2017-01-01"><br />
+	年月:<input type="month" id="m1" value=""><br />
+	年月:<input type="month" id="m2" value="2017-01"><br />
+	年月:<input type="month" id="m3" value="" data-value="2017-01"><br />
 </form>
 
 </body>
